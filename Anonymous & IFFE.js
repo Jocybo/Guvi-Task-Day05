@@ -55,8 +55,10 @@
     for (i = 0; i < a.length; i++) {
         let b = a[i].split("").reverse().join("")
         if (a[i] == b) {
-            console.log(a[i])
+            return a[i];
         }
+        console.log(a[i])
+
     }
 })();
 

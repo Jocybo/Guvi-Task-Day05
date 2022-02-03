@@ -13,11 +13,11 @@ x();
 /////////////////////////////////////////
 
 function addFive(num) {
-    console.log(num + 5);
+    return num + 5;
 };
-addFive(5);
-addFive(0);
-addFive(-5);
+console.log(addFive(5));
+console.log(addFive(0));
+console.log(addFive(-5));
 
 ////////////////////////////////////////
 
@@ -42,6 +42,17 @@ toInteger("12");
 
 ///////////////////////////////////////
 
+let n = "5a";
+
+function getOpposite(n) {
+    if (Number.isInteger(n)) { return n * (-1); } else { return -1 }
+}
+let opposite = getOpposite(n)
+console.log(opposite);
+
+///////////////////////////////////////
+
+
 function nextNumber(int) {
     let a = int + 1;
     console.log(a);
@@ -65,11 +76,11 @@ getFirstElement([-500, 0, 50]);
 
 function hoursToSeconds(hr) {
     let a = hr * 3600;
-    console.log(a);
+    return a;
 }
-hoursToSeconds(2);
-hoursToSeconds(10);
-hoursToSeconds(24);
+console.log(hoursToSeconds(2));
+console.log(hoursToSeconds(10));
+console.log(hoursToSeconds(24));
 
 ////////////////////////////////////////
 
@@ -152,31 +163,27 @@ divisibleByFive(-55)
 
 
 function isEven(num) {
-    if (num % 2 == 0) {
-        console.log("true")
-    } else {
-        console.log("false");
-    }
+    if (parseInt(num) == num) {
+        if (num % 2 === 0) { return true } else { return false }
+    } else { return -1 }
 }
-isEven(12)
-isEven(0)
-isEven(11)
-isEven("11h")
+var even = isEven(5)
+console.log(even);
 
 //////////////////////////////////
 
 function areBothOdd(num1, num2) {
 
     if (num1 & num2 % 2 == 1) {
-        console.log("true")
+        return true;
     } else {
-        console.log("false");
+        return false;
     }
 }
-areBothOdd(1, 3);
-areBothOdd(1, 4);
-areBothOdd(2, 3);
-areBothOdd(0, 0);
+console.log(areBothOdd(1, 3));
+console.log(areBothOdd(1, 4));
+console.log(areBothOdd(2, 3));
+console.log(areBothOdd(0, 0));
 
 ///////////////////////////////////////
 
@@ -205,13 +212,6 @@ console.log(result);
 
 /////////////////////////////////////////////
 
-function getLengthOfWord(word) {
-    return word.length;
-}
-let a = getLengthOfWord("GUVI")
-console.log(a)
-
-/////////////////////////////////////////////
 
 function isSameLength(word1, word2) {
     if (word1.length == word2.length) {
@@ -323,21 +323,6 @@ console.log(powersOfTwo(0))
 console.log(powersOfTwo(1))
 console.log(powersOfTwo(2))
 
-//////////////////////////////////////////////////
-
-function powersOfTwo(n) {
-    var myArray = [];
-    for (var i = 0; i <= n; i++) {
-        myArray.push(2 ** i);
-    }
-    return myArray
-}
-const r = powersOfTwo(0)
-const res = powersOfTwo(1)
-const result = powersOfTwo(2)
-console.log(r);
-console.log(res);
-console.log(result)
 
 //////////////////////////////////////////////////
 
